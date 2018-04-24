@@ -1,5 +1,5 @@
 // ------------------------------------
-// Screen -- Home
+// Screen -- CreatingAScene
 // ------------------------------------
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'

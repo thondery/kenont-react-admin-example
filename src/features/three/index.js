@@ -3,6 +3,7 @@ import { getMenuSub } from 'services/utils'
 import { Icon } from 'antd'
 import Screen from './screen'
 import CreatingAScene from './creating-a-scene'
+import WebglBuffergeometry from './webgl_buffergeometry'
 
 const routes = {
   path: '/three',
@@ -13,6 +14,12 @@ const routes = {
       name: 'Creating a scene', 
       component: CreatingAScene, 
       description: 'Creating a scene'
+    },
+    { 
+      path: 'webgl_buffergeometry', 
+      name: 'buffergeometry', 
+      component: WebglBuffergeometry, 
+      description: 'buffergeometry'
     },
   ]
 }
