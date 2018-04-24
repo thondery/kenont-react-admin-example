@@ -41,6 +41,9 @@ module.exports = {
     'vendor_3': [
       'kenote-react-admin-modal',
       'kenote-react-admin-passport',
+    ],
+    'vendor_4': [
+      'three',
     ]
   },
   entry        : {

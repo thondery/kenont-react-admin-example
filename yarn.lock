@@ -2601,7 +2601,7 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
-fbjs@^0.8.15, fbjs@^0.8.16, fbjs@^0.8.9:
+fbjs@0.8.16, fbjs@^0.8.15, fbjs@^0.8.16, fbjs@^0.8.9:
   version "0.8.16"
   resolved "http://registry.npm.taobao.org/fbjs/download/fbjs-0.8.16.tgz#5e67432f550dc41b572bf55847b8aca64e5337db"
   dependencies:
@@ -5918,6 +5918,15 @@ react-deep-force-update@^2.1.1:
   version "2.1.1"
   resolved "http://registry.npm.taobao.org/react-deep-force-update/download/react-deep-force-update-2.1.1.tgz#8ea4263cd6455a050b37445b3f08fd839d86e909"
 
+react-dom@16.0.0:
+  version "16.0.0"
+  resolved "http://registry.npm.taobao.org/react-dom/download/react-dom-16.0.0.tgz#9cc3079c3dcd70d4c6e01b84aab2a7e34c303f58"
+  dependencies:
+    fbjs "^0.8.16"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
+
 react-dom@^16.0.0:
   version "16.3.2"
   resolved "http://registry.npm.taobao.org/react-dom/download/react-dom-16.3.2.tgz#cb90f107e09536d683d84ed5d4888e9640e0e4df"
@@ -5926,6 +5935,12 @@ react-dom@^16.0.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.0"
+
+react-fiber-export@^1.3.6:
+  version "1.3.6"
+  resolved "http://registry.npm.taobao.org/react-fiber-export/download/react-fiber-export-1.3.6.tgz#cc8e410beecf5cdd9c0b0b4efed33ab2f0fd018f"
+  dependencies:
+    fbjs "0.8.16"
 
 react-hot-loader@^3.1.1:
   version "3.1.3"
@@ -6029,6 +6044,23 @@ react-test-renderer@^16.0.0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
     react-is "^16.3.2"
+
+react-three-renderer-fiber@^0.0.1-0:
+  version "0.0.1-0"
+  resolved "http://registry.npm.taobao.org/react-three-renderer-fiber/download/react-three-renderer-fiber-0.0.1-0.tgz#998ffc707394352b9505246ef77e33f2067b8263"
+  dependencies:
+    react "16.0.0"
+    react-dom "16.0.0"
+    three "^0.87.1"
+
+react@16.0.0:
+  version "16.0.0"
+  resolved "http://registry.npm.taobao.org/react/download/react-16.0.0.tgz#ce7df8f1941b036f02b2cca9dbd0cb1f0e855e2d"
+  dependencies:
+    fbjs "^0.8.16"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
 
 react@^16.0.0:
   version "16.3.2"
@@ -6999,6 +7031,10 @@ test-exclude@^4.2.1:
     object-assign "^4.1.0"
     read-pkg-up "^1.0.1"
     require-main-filename "^1.0.1"
+
+three@^0.87.1:
+  version "0.87.1"
+  resolved "http://registry.npm.taobao.org/three/download/three-0.87.1.tgz#466a34edc4543459ced9b9d7d276b65216fe2ba8"
 
 throat@^4.0.0:
   version "4.1.0"

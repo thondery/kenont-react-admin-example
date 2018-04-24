@@ -38,7 +38,9 @@ export default class CoreLayout extends PureComponent {
     pageLoading && setTimeout(() => {
       this._loadingView.style.width = '100%'
       setTimeout(() => {
-        this._loadingView.style.opacity = 0
+        if (this._loadingView) {
+          this._loadingView.style.opacity = 0
+        }
       }, 1200)
     }, 0)
   }
