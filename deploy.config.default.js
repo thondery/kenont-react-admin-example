@@ -1,6 +1,6 @@
 // Deploy -- 配置部署
 module.exports = {
-  ['pro']: {
+  ['aliyun']: {
     domain: 'API请求地址',
     sftp: {
       server: '<username>:<password>@<address>[:<port>]',
