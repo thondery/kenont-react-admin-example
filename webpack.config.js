@@ -9,8 +9,9 @@ const fs = require('fs-extra')
 const _ = require('lodash')
 const project = require('./project.config')
 
-const { __DEV__, __PROD__, globals, domain } = project
+const { __DEV__, __PROD__, globals } = project
 const contextPath = globals.__DESKTOP__ ? '' : '/'
+fs.writeFileSync(path.resolve(__dirname, project.outDir, 'root.txt'), project.target, 'utf-8')
 
 const getDllReferencePlugin = (items = null) => {
   let plugins = []
@@ -69,8 +70,7 @@ const config = {
   plugins: getDllReferencePlugin([
     new webpack.DefinePlugin(Object.assign({
       'process.env': {
-        'NODE_ENV': JSON.stringify(project.env),
-        'domain': JSON.stringify(domain)
+        'NODE_ENV': JSON.stringify(project.env)
       },
       __DEV__,
       __PROD__
@@ -98,7 +98,8 @@ const config = {
       'shorthands'  : true,
       'collections' : true,
       'paths'       : true
-    })
+    }),
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
   ]),
   module: {
     rules: [

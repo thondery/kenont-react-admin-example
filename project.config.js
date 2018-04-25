@@ -1,15 +1,20 @@
 
 const path = require('path')
 const NODE_ENV = process.env.NODE_ENV || 'development'
+const Deploy = require('./deploy.config')
+
+const Options = Deploy[process.env.target]
+const domain = Options ? Options.domain : 'http://localhost:4000'
 
 module.exports = {
   env          : NODE_ENV,
   __PROD__     : NODE_ENV === 'production',
   __DEV__      : NODE_ENV === 'development',
-  domain       : process.env.domain || 'http://localhost:4000',
   globals      : {
-    __DESKTOP__  : true
+    __DESKTOP__  : true,
+    __DOMAIN__   : JSON.stringify(domain),
   },
+  target       : process.env.target || 'local',
   basePath     : __dirname,
   srcDir       : 'src',
   outDir       : 'dist',
@@ -33,6 +38,7 @@ module.exports = {
       'react-router',
       'react-router-dom',
       'react-router-redux',
+      'pubsub-js',
       'prop-types',
       'localforage',
       'http-services',
